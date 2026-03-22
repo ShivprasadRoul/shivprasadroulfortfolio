@@ -27,7 +27,7 @@ const EXPERIENCES = [
     company: 'Entropik Technologies Pvt. Ltd.',
     role: 'Backend Engineer — GenAI & Agentic Systems',
     location: 'Chennai, India',
-    period: 'Nov 2024 – Present',
+    period: 'Nov 2025 – Present',
     isCurrent: true,
     bullets: [
       'Led end-to-end backend development of a real-time agentic AI moderation platform using Python and FastAPI — API design, async processing, prompt orchestration, AWS deployment.',
@@ -41,7 +41,7 @@ const EXPERIENCES = [
     company: 'Infoware India',
     role: 'Backend Engineer — RAG Platform',
     location: 'Remote',
-    period: 'Aug 2024 – Nov 2024',
+    period: 'Aug 2025 – Nov 2025',
     isCurrent: false,
     bullets: [
       'Designed and delivered a full RAG platform for Kool.ai — 10,000+ enterprise documents ingested.',
