@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <filter id="premiumGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#2D3A8C" flood-opacity="0.15" />
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2D3A8C" flood-opacity="0.2" />
+    </filter>
+    <style><![CDATA[
+.flowing-line {
+        stroke-dasharray: 6000;
+        stroke-dashoffset: 6000;
+        animation: drawLine 6s cubic-bezier(0.25, 1, 0.4, 1) forwards;
+      }
+      @keyframes drawLine {
+        0% { stroke-dashoffset: 6000; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .particle {
+        animation: float 5s ease-in-out infinite alternate;
+      }
+      .particle:nth-child(even) {
+        animation-duration: 7s;
+        animation-delay: 1s;
+      }
+      .particle:nth-child(3n) {
+        animation-duration: 6s;
+        animation-delay: 2s;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px) translateX(0px); opacity: 0.1; }
+        50% { opacity: 0.4; }
+        100% { transform: translateY(-15px) translateX(5px); opacity: 0.1; }
+      }
+]]></style>
+  </defs>
+
+  <!-- Atmospheric Particles -->
+  <g fill="#2D3A8C">
+    <circle cx="360" cy="180" r="1.5" class="particle" />
+    <circle cx="480" cy="140" r="2" class="particle" />
+    <circle cx="580" cy="100" r="1" class="particle" />
+    <circle cx="700" cy="80" r="1.5" class="particle" />
+    <circle cx="820" cy="120" r="2" class="particle" />
+    <circle cx="940" cy="140" r="1" class="particle" />
+    <circle cx="1060" cy="160" r="1.5" class="particle" />
+    <circle cx="1160" cy="190" r="2" class="particle" />
+  </g>
+
+  <!-- Main Continuous Flowing Line -->
+  <path class="flowing-line" filter="url(#premiumGlow)" 
+        stroke="#2D3A8C" stroke-width="1.5" stroke-opacity="0.7" 
+        fill="none" stroke-linecap="round" stroke-linejoin="round"
+        d="
+          /* Lead-in Flow */
+          M -20 220 
+          C 100 220, 200 260, 320 240 
+          S 360 260, 380 260
+
+          /* Developer Laptop */
+          L 430 260 L 440 245 L 390 245 L 380 260
+          M 390 245 L 400 200 L 450 200 L 440 245
+          M 412 215 C 408 215, 408 222, 412 222 C 408 222, 408 229, 412 229
+          M 428 215 C 432 215, 432 222, 428 222 C 432 222, 432 229, 428 229
+          M 440 245 C 460 245, 480 260, 500 240
+
+          /* AI Brain & Neural Nodes */
+          C 490 210, 490 170, 510 160
+          C 530 140, 550 160, 550 180
+          C 570 180, 570 220, 550 230
+          C 530 250, 510 250, 500 240
+          M 515 185 A 2 2 0 1 1 515.1 185
+          L 530 170 A 2 2 0 1 1 530.1 170
+          L 545 195 A 2 2 0 1 1 545.1 195
+          L 525 210 A 2 2 0 1 1 525.1 210
+          L 515 185
+          M 550 230 C 570 240, 590 260, 610 240
+
+          /* Rocket Launch */
+          C 610 210, 620 160, 630 150 
+          C 640 160, 650 210, 640 240
+          L 610 240
+          M 615 240 L 605 260 L 615 250 
+          M 635 240 L 645 260 L 635 250
+          M 625 190 A 3 3 0 1 1 625.1 190
+          M 615 240 C 620 270, 630 270, 635 240
+
+          /* Orbit & Satellite */
+          M 630 150 C 640 100, 670 80, 690 110
+          M 690 110 L 680 100 L 685 95 L 695 105 Z
+          M 695 105 L 705 115 L 700 120 L 690 110 Z
+          M 692 107 L 698 113
+          M 690 110 C 710 140, 720 180, 740 220
+
+          /* Startup Growth Graph */
+          L 750 250 L 765 210 L 775 230 L 790 180
+          M 780 180 L 790 180 L 790 190
+
+          /* Lightbulb */
+          M 790 180 C 800 160, 800 140, 810 140
+          C 800 120, 830 110, 830 140 
+          C 830 155, 820 165, 820 175 
+          L 810 175 C 810 165, 800 155, 810 140
+          M 812 175 L 818 175 M 813 180 L 817 180
+          M 815 145 L 812 155 L 818 155 Z
+          M 815 180 C 820 220, 830 250, 850 250
+
+          /* Konark Wheel */
+          M 870 250 A 15 15 0 1 1 869.9 250
+          M 870 250 A 3 3 0 1 1 869.9 250
+          M 855 250 L 885 250 M 870 235 L 870 265 
+          M 859 239 L 881 261 M 859 261 L 881 239
+
+          /* Odishan Temple Shikhara */
+          M 885 250 C 895 250, 900 260, 910 260
+          L 910 260 C 915 220, 920 180, 925 160 
+          C 930 180, 935 220, 940 260 L 910 260
+          M 920 160 L 930 160 M 925 160 L 925 150
+          M 940 260 C 950 260, 960 250, 970 240
+
+          /* Elephant Profile */
+          C 980 230, 990 220, 1000 230
+          C 1010 240, 1005 280, 1000 285 
+          C 995 290, 990 280, 995 275
+          M 1000 230 C 990 240, 995 260, 1005 250
+          M 1000 230 C 1015 230, 1025 240, 1025 260 L 1025 280 
+          M 1015 260 L 1015 280
+          M 1000 255 L 995 260
+          M 1025 260 C 1035 250, 1045 230, 1055 220
+
+          /* Leaping Deer */
+          C 1065 200, 1075 190, 1085 180
+          C 1090 170, 1085 160, 1090 150
+          M 1085 180 C 1075 190, 1080 210, 1070 220
+          M 1055 220 C 1050 230, 1060 240, 1050 250
+          M 1090 150 C 1095 145, 1100 150, 1095 155
+          M 1070 220 C 1085 240, 1100 260, 1115 260
+
+          /* Sea Turtle */
+          C 1125 250, 1145 250, 1155 260
+          C 1165 265, 1160 270, 1155 260
+          M 1135 260 C 1130 275, 1140 280, 1145 270
+          M 1155 260 C 1165 260, 1170 240, 1175 230
+
+          /* Artistic Flourish Curl */
+          S 1190 200, 1170 180 
+          S 1140 220, 1160 260 
+          S 1200 300, 1180 280 
+          C 1170 270, 1165 265, 1175 260
+        " />
+</svg>
